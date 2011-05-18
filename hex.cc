@@ -17,7 +17,7 @@ static Handle<Value> Hex(const Arguments& args) {
     char* buffer_data = Buffer::Data(buffer);
     size_t buffer_len = Buffer::Length(buffer);
 
-    char data[buffer_len];
+    char data[buffer_len * 2];
 
     int p = 0;
     for (int i = 0; i < buffer_len; ++i) {
