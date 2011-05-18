@@ -1,6 +1,7 @@
 #include <v8.h>
 #include <node.h>
 #include <node_buffer.h>
+#include <stdio.h>
 
 using namespace v8;
 using namespace node;
@@ -21,7 +22,7 @@ static Handle<Value> Hex(const Arguments& args) {
 
     int p = 0;
     for (int i = 0; i < buffer_len; ++i) {
-        data[p++] = hexstring[ buffer_data[i] >> 4 ];
+        data[p++] = hexstring[ (buffer_data[i] >> 4) & 0xf ];
         data[p++] = hexstring[ buffer_data[i] & 0xf ];
     }
 
