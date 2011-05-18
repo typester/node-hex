@@ -1,5 +1,5 @@
 { "name": "hex"
-  ,"version": "0.1.0"
+  ,"version": "0.1.1"
   ,"main": "./build/default/hex"
   ,"description": "Temporary module to convert Buffer to hex string"
   ,"scripts" : { "install" : "node-waf configure build" }
